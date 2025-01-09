@@ -1,0 +1,380 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+}
+
+header nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    padding: 0 20px;
+}
+
+header nav ul li a {
+    color: goldenrod;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    background: url('wallpaper.jpg') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    margin-top: auto;
+}
+
+#new-image {
+    text-align: center;
+    padding: 20px 0;
+    background-color: white;
+    color: goldenrod;
+}
+
+#Types {
+    padding: 50px 20px;
+    background-color: white;
+}
+
+.bike-collection {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px; 
+    justify-items: center;
+}
+
+.bike {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.bike .sequential {
+    width: 100%;
+    height: 300px; 
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+
+.bike .sequential.classic { animation: change-classic 7s steps(7) infinite paused; }
+.bike:hover .sequential.classic { animation-play-state: running; }
+
+.bike .sequential.bullet { animation: change-bullet 6s steps(6) infinite paused; }
+.bike:hover .sequential.bullet { animation-play-state: running; }
+
+.bike .sequential.gt { animation: change-gt 6s steps(6) infinite paused; }
+.bike:hover .sequential.gt { animation-play-state: running; }
+
+.bike .sequential.interceptor { animation: change-interceptor 7s steps(7) infinite paused; }
+.bike:hover .sequential.interceptor { animation-play-state: running; }
+
+.bike .sequential.hunter { animation: change-hunter 8s steps(8) infinite paused; }
+.bike:hover .sequential.hunter { animation-play-state: running; }
+
+.bike .sequential.himalayan { animation: change-himalayan 5s steps(5) infinite paused; }
+.bike:hover .sequential.himalayan { animation-play-state: running; }
+
+.model-description {
+    font-size: 16px;
+    color: goldenrod;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5; 
+    text-align: center;
+}
+
+
+@keyframes change-classic {
+    0% { background-image: url('classic1.png'); }
+    16.67% { background-image: url('classic2.png'); }
+    33.33% { background-image: url('classic3.png'); }
+    50% { background-image: url('classic4.png'); }
+    66.67% { background-image: url('classic5.png'); }
+    83.33% { background-image: url('classic6.png'); }
+    100% { background-image: url('classic7.png'); }
+}
+
+@keyframes change-bullet {
+    0% { background-image: url('bullet1.png'); }
+    20% { background-image: url('bullet2.png'); }
+    40% { background-image: url('bullet3.png'); }
+    60% { background-image: url('bullet4.png'); }
+    80% { background-image: url('bullet5.png'); }
+    100% { background-image: url('bullet6.png'); }
+}
+
+@keyframes change-gt {
+    0% { background-image: url('gt1.png'); }
+    20% { background-image: url('gt2.png'); }
+    40% { background-image: url('gt3.png'); }
+    60% { background-image: url('gt4.png'); }
+    80% { background-image: url('gt5.png'); }
+    100% { background-image: url('gt6.png'); }
+}
+
+@keyframes change-interceptor {
+    0% { background-image: url('interceptor1.png'); }
+    16.67% { background-image: url('interceptor2.png'); }
+    33.33% { background-image: url('interceptor3.png'); }
+    50% { background-image: url('interceptor4.png'); }
+    66.67% { background-image: url('interceptor5.png'); }
+    83.33% { background-image: url('interceptor6.png'); }
+    100% { background-image: url('interceptor7.png'); }
+}
+
+@keyframes change-hunter {
+    0% { background-image: url('hunter1.png'); }
+    14.29% { background-image: url('hunter2.png'); }
+    28.57% { background-image: url('hunter3.png'); }
+    42.86% { background-image: url('hunter4.png'); }
+    57.14% { background-image: url('hunter5.png'); }
+    71.43% { background-image: url('hunter6.png'); }
+    85.71% { background-image: url('hunter7.png'); }
+    100% { background-image: url('hunter8.png'); }
+}
+
+@keyframes change-himalayan {
+    0% { background-image: url('himalayan1.png'); }
+    25% { background-image: url('himalayan2.png'); }
+    50% { background-image: url('himalayan3.png'); }
+    75% { background-image: url('himalayan4.png'); }
+    100% { background-image: url('himalayan5.png'); }
+}
+
+
+.model-info {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.model-info th, .model-info td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    color: goldenrod;
+}
+
+.model-info th {
+    background-color: #333;
+    color: white;
+}
+
+.model-info td {
+    background-color: #222;
+}
+
+
+.model-info tr:hover {
+    background-color: #444;
+}
+
+
+.bike-container {
+    padding: 20px;
+  }
+  
+  
+  .bike-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  
+  .bike-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  
+  .bike-card {
+    flex: 1 1 calc(50% - 20px);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .bike-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  
+.bike-section {
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+  }
+  
+  
+  .bike-section-heading {
+    font-size: 2.5rem;
+    color:red;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px; 
+  }
+  
+  
+  .bike-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px; 
+    height: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    text-align: center; 
+  }
+  
+  
+  .bike-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+ 
+  .bike-card img {
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .bike-card-body {
+    padding: 15px;
+  }
+  
+  .bike-card-title {
+    font-size: 1.5rem;
+    color: #ff4500; 
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .bike-card-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .video-frame {
+    aspect-ratio: 3/2;
+    width: 100%;
+    border: none;
+    border-radius: 8px; 
+  }
+  
+
+#registration-form {
+    padding: 50px 20px;
+    background-color: white;
+    color: goldenrod;
+    text-align: center;
+  }
+  
+  #registration-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url('wallpaper3.png');
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  
+  .form-group input {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: white;
+    color: goldenrod;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: goldenrod;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: goldenrod;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ffcc00;
+  }
+  
